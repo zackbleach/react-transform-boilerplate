@@ -10,15 +10,14 @@ export default class Counter extends Component {
 
   render () {
     return (
-        <div>
-        <div className={styles.friendInfos}>
+        <li className={styles.counter}>
           <div><span>{this.props.number}</span></div>
-        </div>
         <div className={styles.friendActions}>
           <button className={`btn btn-default ${styles.btnAction}`} onClick={() => this.props.onIncrementClick()}>
+            <i className={classnames('fa', { 'fa-plus': true })} />
           </button>
         </div>
-        </div>
+        </li>
     );
   }
 
