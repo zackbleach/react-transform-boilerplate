@@ -22,7 +22,10 @@ export default class CounterApp extends Component {
       return (
               <div>
                 <h1>Counter</h1>
-                <Counter number={counter} onIncrementClick={actions.incrementCounter} actions={actions} />
+                <Counter number={counter}
+                         onIncrementClick={actions.incrementCounter}
+                         onDecrementClick={actions.decrementCounter}
+                         actions={actions} />
             </div>
     );
   }

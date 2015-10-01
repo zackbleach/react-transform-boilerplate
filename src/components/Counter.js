@@ -5,7 +5,8 @@ import styles from './Counter.css';
 export default class Counter extends Component {
   static propTypes = {
     number: PropTypes.number.isRequired,
-    onIncrementClick: PropTypes.func.isRequired
+    onIncrementClick: PropTypes.func.isRequired,
+    onDecrementClick: PropTypes.func.isRequired
   }
 
   render () {
@@ -15,6 +16,9 @@ export default class Counter extends Component {
         <div className={styles.friendActions}>
           <button className={`btn btn-default ${styles.btnAction}`} onClick={() => this.props.onIncrementClick()}>
             <i className={classnames('fa', { 'fa-plus': true })} />
+          </button>
+          <button className={`btn btn-default ${styles.btnAction}`} onClick={() => this.props.onDecrementClick()}>
+            <i className={classnames('fa', { 'fa-minus': true })} />
           </button>
         </div>
         </li>
